@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت سفارش | لوازم خانگی یادگار</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">لوازم خانگی <span>یادگار</span></a>
+        <nav class="nav">
+            <a href="index.html">صفحه اصلی</a>
+            <a href="products.html">محصولات</a>
+            <a href="order.html" class="active">سفارش</a>
+        </nav>
+        <a href="order.html" class="cart-link">🛒 <span class="cart-count">۰</span></a>
+    </div>
+</header>
+
+<section class="page-title">
+    <h1>تکمیل سفارش</h1>
+    <p>لطفاً اطلاعات خود را با دقت وارد کنید</p>
+</section>
+
+<section class="section order-wrapper">
+
+    <div class="order-box">
+        <h2>خلاصه سبد خرید</h2>
+        <div id="cartItems"></div>
+        <div class="cart-total-row">
+            <span>مبلغ کل:</span>
+            <strong id="cartTotal">۰ تومان</strong>
+        </div>
+    </div>
+
+    <form id="orderForm" class="order-box">
+        <h2>اطلاعات خریدار</h2>
+
+        <div class="form-group">
+            <label for="fullname">نام و نام خانوادگی</label>
+            <input type="text" id="fullname" required placeholder="مثال: علی رضایی">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">شماره تماس</label>
+            <input type="tel" id="phone" required placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+        </div>
+
+        <div class="form-group">
+            <label for="city">شهر</label>
+            <input type="text" id="city" required placeholder="مثال: تهران">
+        </div>
+
+        <div class="form-group">
+            <label for="address">آدرس کامل</label>
+            <textarea id="address" rows="3" required placeholder="خیابان، کوچه، پلاک..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="postal">کد پستی</label>
+            <input type="text" id="postal" placeholder="۱۰ رقم">
+        </div>
+
+        <div class="form-group">
+            <label>روش پرداخت</label>
+            <div class="radio-row">
+                <label><input type="radio" name="pay" value="cod" checked> پرداخت در محل</label>
+                <label><input type="radio" name="pay" value="card"> کارت به کارت</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="note">توضیحات (اختیاری)</label>
+            <textarea id="note" rows="2" placeholder="زمان تحویل، توضیح خاص..."></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn-accent btn-block">
+            ثبت نهایی سفارش
+        </button>
+    </form>
+
+</section>
+
+<footer class="site-footer">
+    <p>© ۱۴۰۴ - تمامی حقوق برای فروشگاه لوازم خانگی <strong>یادگار</strong> محفوظ است.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
